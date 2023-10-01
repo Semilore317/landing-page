@@ -66,6 +66,7 @@ function companyStay() {
 
 //maintain aspect ratio of the image
 const imageContainer = document.querySelector('.img-container');
+const imageContainerImg = document.querySelector('.img-container img');
 function aspectRatio(){
     if (window.innerWidth >= 869) {
     const height = imageContainer.offsetHeight;
@@ -76,8 +77,9 @@ function aspectRatio(){
     imageContainer.style.height = `${height}px`;
     console.log('done');    
     }
-    else{
-        console.log('the screen is large');
+    else if (window.innerWidth <= 869) {
+        return 'the screen is mobile';
+        imageContainerImg.src = 'images/image-hero-mobile.png';
     }
 }
 //add the event listener
@@ -95,7 +97,9 @@ function changeImg() {
         //delete line-break
         const lineBreak = document.querySelector('.text-container h1');
         lineBreak.innerHTML = 'Make remote work';
-
+    }  else if(window.innerWidth >= 869){
+        imageToBeChanged.src = "images/image-hero-desktop.png"
+    }
         //Maintain aspect ratio
         if (window.innerWidth <= 869) {
             const width = imageContainer.offsetWidth;
@@ -109,14 +113,21 @@ function changeImg() {
             else{
                 console.log('the screen is large');
             }
-    }else if(window.innerWidth >= 869){
-        imageToBeChanged.src = "images/image-hero-desktop.png"
-    }
-
 }
-window.addEventListener('DOMContentLoaded',changeImg)
-window.addEventListener('',changeImg)
+window.addEventListener('DOMContentLoaded',changeImg);
+window.addEventListener('reload',changeImg);
 window.addEventListener('load', changeImg);
 window.addEventListener('resize', changeImg);
 
 
+//Make the nav slide in
+
+navWrapper = document.querySelector('.nav-wrapper');
+burger = document.querySelector('.burger-div');
+function slideIn() {
+    //navWrapper.style.transform = `translateX(0px)`;
+    navWrapper.classList.toggle("slide-in");
+    burger.classList.toggle('burger-x');
+
+    console.log('slide');
+}

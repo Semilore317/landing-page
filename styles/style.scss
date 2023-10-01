@@ -32,7 +32,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 30%;
     //background: rgba(255, 0, 0, 0.288);
     width: 500px;
     height: 100%;
@@ -324,9 +324,170 @@ header{
 
 /*Tablet*/
 @media screen and (max-width:1024px) {
-    
+    .nav-links{
+        width: 20%;
+    }
 }
 
-@media screen and (max){
+@media screen and (max-width: 869px){
+    $nav-links-height: 40vh;
+
+    body{
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    header{
+        height: 5vh;
+    }
+
+    .burger-div{
+        z-index: 5;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        position: absolute;
+        right: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        div{
+            width: 100%;
+            height: 3px;
+            background: black;
+        }
+
+        .rotate-1{
+            transform: rotate(45deg);
+        }
+    }
+
+    .nav-wrapper{
+        //display: none; //to be changed in the js file to flex and in the .slide-in class
+        //display: flex;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 60vw;
+        background: rgb(255, 255, 255);
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.186);
+        //make it dissapear out of sight
+        transform: translateX(100%);
+        z-index: 4;
+        transition: all 0.3s ease-out;
+    }
     
+    .features-dropdown{
+        position: static;
+        display: block;
+    }
+    /*
+        .features-dropdown,
+    .company-dropdown{
+        display: none;
+        height: 1px;
+    }
+    */
+    .nav-links{
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: $nav-links-height;
+        width: 100%;
+
+        li{
+            width: auto;
+            height: 30px;
+        }
+    }
+
+
+
+    .nav-last-span{
+        display: block; 
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50vh;
+        width: 100%;
+        font-family: 'Roboto';
+        font-weight: 600;
+
+        p{
+            text-align: center;
+        }
+
+        div{
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+
+            border-radius: 20px;
+        }
+    }
+
+    .container{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100vw;
+        height: 95vh;
+        overflow-y: scroll;
+    }
+
+    .text-container{
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1{
+            font-size: 60px;
+            margin-top: 5px;
+        }
+        h3{
+            margin-top: 20px;
+            text-align: center;
+        }
+        section{
+            width: 100vw;
+            margin-top: 0px;
+        }
+    }
+    
+    .btn{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .img-container{
+        width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+    }
+
+    .slide-in{
+        transform: translateX(0);
+        display: flex;
+    }
+
+    .burger-x{
+        & :nth-child(1){
+            transform: rotate(45deg)translate(45%,45%);
+        }
+        & :nth-child(2){
+            opacity: 0;
+        }
+        & :nth-child(3){
+            transform: rotate(-45deg)translate(45%,-45%);
+        }
+    }
 }

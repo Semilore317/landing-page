@@ -27,43 +27,45 @@
             <p class="nav-link-p">Features</p>
             <span class="not-there">s</span> 
             <img id="features-arrow" src="down-arrow.png" alt="arrow-up">
+
+            <div class="features-dropdown" onmouseover="stay()">
+              <span class="dropdown-span">
+                <img src="images/icon-todo.svg" alt="todo-list icon">
+                <p>Todo List</p>
+              </span class="dropdown-span">
+              
+              <span class="dropdown-span">
+                <img src="images/icon-calendar.svg" alt="todo-list icon">
+                <p>Calendar</p>
+              </span class="dropdown-span">
+              
+              <span class="dropdown-span">
+                <img src="images/icon-reminders.svg" alt="todo-list icon">
+                <p>Reminders</p>
+              </span class="dropdown-span">
+              
+              <span class="dropdown-span">
+                <img src="images/icon-planning.svg" alt="todo-list icon">
+                <p>Planning</p>
+              </span>
+            </div>
           </li>
   
-          <div class="features-dropdown" onmouseover="stay()">
-            <span class="dropdown-span">
-              <img src="images/icon-todo.svg" alt="todo-list icon">
-              <p>Todo List</p>
-            </span class="dropdown-span">
-            
-            <span class="dropdown-span">
-              <img src="images/icon-calendar.svg" alt="todo-list icon">
-              <p>Calendar</p>
-            </span class="dropdown-span">
-            
-            <span class="dropdown-span">
-              <img src="images/icon-reminders.svg" alt="todo-list icon">
-              <p>Reminders</p>
-            </span class="dropdown-span">
-            
-            <span class="dropdown-span">
-              <img src="images/icon-planning.svg" alt="todo-list icon">
-              <p>Planning</p>
-            </span>
-          </div>
+        
           
           <li id="company" onmouseover="companyAppear()" onmouseleave="companyDisappear()">
             <p class="nav-link-p">Company</p>  
             <span class="not-there">s</span> 
             <img id="company-arrow" src="down-arrow.png" alt="arrow-up">
+
+            <div class="company-dropdown">
+              <ul>
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
           </li>
-  
-          <div class="company-dropdown">
-            <ul>
-              <li>History</li>
-              <li>Our Team</li>
-              <li>Blog</li>
-            </ul>
-          </div>
           
           <li> 
             <p class="nav-link-p">Careers</p>  
@@ -73,6 +75,7 @@
             <p class="nav-link-p">About</p>  
           </li>
         </ul> 
+
         <span class="nav-last-span">
           <p>Login</p>
     
@@ -87,7 +90,7 @@
 
 
 
-    <div class="burger-div">
+    <div class="burger-div" onclick="slideIn()">
       <div class="burger-1"></div>
       <div class="burger-2"></div>
       <div class="burger-3"></div>
