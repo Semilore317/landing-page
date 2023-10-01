@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="128x128" href="raw3A2Fstorage2Femulated2F02FDownload2F1687329012141_Glitch2.jpg">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo-txt">snap</h1>
+        <div class="nav-wrapper">
+          <ul class="nav-links">
+
+            <li id="features" onmouseover="featuresAppear()" onmouseleave="featuresDisappear()"> 
+            <p class="nav-link-p">Features</p>
+            <span class="not-there">s</span> 
+            <img id="features-arrow" src="down-arrow.png" alt="arrow-up">
+          </li>
+  
+          <div class="features-dropdown" onmouseover="stay()">
+            <span class="dropdown-span">
+              <img src="images/icon-todo.svg" alt="todo-list icon">
+              <p>Todo List</p>
+            </span class="dropdown-span">
+            
+            <span class="dropdown-span">
+              <img src="images/icon-calendar.svg" alt="todo-list icon">
+              <p>Calendar</p>
+            </span class="dropdown-span">
+            
+            <span class="dropdown-span">
+              <img src="images/icon-reminders.svg" alt="todo-list icon">
+              <p>Reminders</p>
+            </span class="dropdown-span">
+            
+            <span class="dropdown-span">
+              <img src="images/icon-planning.svg" alt="todo-list icon">
+              <p>Planning</p>
+            </span>
+          </div>
+          
+          <li id="company" onmouseover="companyAppear()" onmouseleave="companyDisappear()">
+            <p class="nav-link-p">Company</p>  
+            <span class="not-there">s</span> 
+            <img id="company-arrow" src="down-arrow.png" alt="arrow-up">
+          </li>
+  
+          <div class="company-dropdown">
+            <ul>
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          
+          <li> 
+            <p class="nav-link-p">Careers</p>  
+          </li>
+          
+          <li> 
+            <p class="nav-link-p">About</p>  
+          </li>
+        </ul> 
+        <span class="nav-last-span">
+          <p>Login</p>
+    
+          <div class="reg-btn">
+            <p>Register</p>
+          </div>
+        </span>
+        </div>     
+    </nav>      
+    
+      
+
+
+
+    <div class="burger-div">
+      <div class="burger-1"></div>
+      <div class="burger-2"></div>
+      <div class="burger-3"></div>
+    </div>
+  </header>
+ 
+  <main>
+    <div class="container">
+      <div class="text-container">
+        <h1>Make <br> remote work</h1>
+        
+        <h3>
+          Get your team in sync, no matter your location. <br> Streamline processes, create team rituals, and <br> watch productivity soar. 
+        </h3>
+
+        <button class="btn">
+          Learn more
+        </button>
+        
+        <section class="svg-wrapper">
+          <section class="svg-container">
+            <img src="images/client-databiz.svg" alt="">
+            <img src="images/client-audiophile.svg" alt="">
+            <img src="images/client-meet.svg" alt="">
+            <img src="images/client-maker.svg" alt="">
+          </section>
+        </section>
+      </div>
+
+      <div class="img-container">
+        <img src="./images/image-hero-desktop.png" alt="" srcset="">
+        <p>empty-div😁</p>
+      </div>
+    </div>
+
+    
+ 
+
+  </main>
+</body>
+</html>
